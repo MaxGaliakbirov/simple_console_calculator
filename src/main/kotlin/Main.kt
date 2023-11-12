@@ -10,10 +10,10 @@ fun main(){
         if (firstString != null && secondString != null && oper != null) {
             val result = calculate(firstString, secondString, oper)
             println("Результат: $result")
-            println("Для выхода введите Stop")
-            val exitCommand = readLine()?.uppercase()
-            if (exitCommand == "STOP") break
         } else println("Вы ввели не верное значение!")
+        println("Для выхода введите Stop, для продолжения нажмите Enter")
+        val exitCommand = readLine()?.uppercase()
+        if (exitCommand == "STOP") break
     }
 }
 fun calculate(a: Double?, b: Double?, operat: String?): Double {
